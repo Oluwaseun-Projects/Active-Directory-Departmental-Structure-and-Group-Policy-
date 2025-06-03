@@ -75,7 +75,7 @@ This project simulates a real-world organizational structure in **Windows Server
 
 ### 3. 👤 Create Users for Each Department
 - In each OU:
-  - **IT**:
+  - **IT**: right-click on the OU: then click 'New'
 <img width="813" alt="07-IT-Manager" src="https://github.com/user-attachments/assets/baacf694-8a79-4a4f-9085-28eb691931d4" />
 
     
@@ -88,14 +88,22 @@ This project simulates a real-world organizational structure in **Windows Server
 
 <img width="343" alt="10-User-Created" src="https://github.com/user-attachments/assets/bc2978b9-f7f4-477f-8583-f6e030f7f4a5" />
 
-`Bob Marley` `Isaac Spencer` `William Kent`
+**IT**: `Bob Marley` `Isaac Spencer` `William Kent`
 
 <img width="422" alt="11-IT-Users" src="https://github.com/user-attachments/assets/8c45d0e4-4946-466c-a7ff-4f1ae80de7a1" />
 
-  - **Sales**: `SalesRep1`, `SalesRep2`, `SalesRep3`
-  - **Finance**: `FinanceManager`, `FinanceAnalyst1`, `FinanceAnalyst2`
 
----
+
+- **Sales**: `John Burke`, `Bridget Hance`, `Taiwo Jake`
+
+<img width="490" alt="12-Sales Employees" src="https://github.com/user-attachments/assets/e47d118d-58e0-4efd-9113-cb2593dffb07" />
+
+
+- **Finance**: `Frank James`, `Freddy Hammy`, `Friday Ince`
+
+
+---<img width="476" alt="13-Sales Employees" src="https://github.com/user-attachments/assets/730c2241-b219-4925-a884-b0c8a20db78b" />
+
 
 ### 4. 👥 Create Security Groups
 - Right-click the domain → `New > Group`
