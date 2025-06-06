@@ -107,10 +107,33 @@ This project simulates a real-world organizational structure in **Windows Server
 
 ### 4. 👥 Create Security Groups
 - Right-click the domain → `New > Group`
+
+<img width="538" alt="01-Create A Security Group " src="https://github.com/user-attachments/assets/2ffa31d7-f8f9-422f-857c-c288186b43db" />
+
+  
   - `IT_Dept`
+<img width="346" alt="IT _Dept" src="https://github.com/user-attachments/assets/10f499f0-d913-44e7-a30d-a8ed944b31bf" />
+
+    
   - `Sales_Dept`
-  - `Finance_Dept`
+<img width="350" alt="04-Sales_Sec_Grp" src="https://github.com/user-attachments/assets/32f17e6a-a755-45ea-9962-d3a5013ee607" />
+
+- `Finance_Dept`
+<img width="362" alt="02-Finance_Sec_Grp" src="https://github.com/user-attachments/assets/b0acf84e-bf5a-42f6-950b-61203fcb2bca" />
+
+- `All Security Groups Created`
+<img width="560" alt="05-Sec_Grp_Created" src="https://github.com/user-attachments/assets/83e7d889-9f41-437e-801f-378719977dcd" />
+
+
 - Add users to their respective department groups
+
+<img width="774" alt="06-Add_Fin_Users" src="https://github.com/user-attachments/assets/d4026dd5-1a0b-49a6-a95e-d794db647c5c" />
+
+<img width="364" alt="07-Add to Finance" src="https://github.com/user-attachments/assets/b9cac340-aa88-4d2f-9400-73700bbf9669" />
+
+<img width="715" alt="08-Add Users to IT" src="https://github.com/user-attachments/assets/356fc6b9-fdd4-411b-bc51-606e1232cd84" />
+
+<img width="786" alt="09-Add-Users to Sales" src="https://github.com/user-attachments/assets/e7d091ec-51ac-41da-9429-f5da3c3810e3" />
 
 ---
 
