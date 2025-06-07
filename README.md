@@ -1,4 +1,4 @@
-# 🛡️ Active Directory Departmental Structure & Group Policy Project
+<img width="298" alt="04_All GPOs" src="https://github.com/user-attachments/assets/e36eb7a4-e8ee-4ca4-930c-441da2d7f604" /># 🛡️ Active Directory Departmental Structure & Group Policy Project
 
 This project simulates a real-world organizational structure in **Windows Server Active Directory**, implementing **organizational units (OUs)**, **user and group management**, **NTFS folder permissions**, and **Group Policy Objects (GPOs)** tailored to each department.
 
@@ -140,16 +140,62 @@ This project simulates a real-world organizational structure in **Windows Server
 ### 5. 📁 Create Departmental Folders and Set NTFS Permissions
 - On the server or shared storage:
   - Create folders: `IT`, `Sales`, `Finance`
+ 
+    <img width="799" alt="10-Folders" src="https://github.com/user-attachments/assets/9c4f1584-a512-46b6-83a8-739656713f72" />
+
 - Set NTFS Permissions:
   - Each group gets **Full Control** on its folder
-  - `ITManager` gets **Read/Write or Full Control** access to `Sales` and `Finance`
+
+- Properties
+<img width="860" alt="11-Finance-properties" src="https://github.com/user-attachments/assets/2999e8d2-ca8b-46d9-9d06-fa6ffe8098b0" />
+
+- Security Settings
+<img width="811" alt="12-Finance-Security Setting" src="https://github.com/user-attachments/assets/bf7cf0e0-8a55-42c1-bbc7-3b26c54e984b" />
+
+- Permissions
+<img width="289" alt="13-Finance Permission" src="https://github.com/user-attachments/assets/061e2497-a73f-4eb5-9f12-1d6399890863" />
+
+- Add Target Group
+<img width="391" alt="14-Add fininace_dept" src="https://github.com/user-attachments/assets/9370ab2c-6744-4d3d-859d-4f26488f562a" />
+
+- Full Control Checked
+<img width="292" alt="15-Finance Full control" src="https://github.com/user-attachments/assets/419e5e62-7ceb-4742-9bdb-8b3a728be210" />
+
+- Full Control Completed: `Finance`
+<img width="298" alt="16-Finance- Full Control Activation " src="https://github.com/user-attachments/assets/c496eba9-4337-4cdf-a1b1-fc0fa630aaca" />
+
+- Full Control Completed: `IT`
+<img width="296" alt="17-IT - Full Control" src="https://github.com/user-attachments/assets/a05d5ccc-de65-42bf-811e-d200d3986818" />
+
+- Full Control Completed: `Sales`
+<img width="290" alt="18-Sales Full Control" src="https://github.com/user-attachments/assets/2d46b6ae-a976-4f6e-9a21-7269ffaef1f6" />
+
+
+  - `ITManager` **Bob Marley** gets **Read/List** access to `Sales` and `Finance`
+
+- `Bob Marley ` permission in Finance
+<img width="297" alt="19 Bob on Finance " src="https://github.com/user-attachments/assets/4232b0de-88b4-47da-b8a9-e0b1d645fb50" />
+
+- `Bob Marley ` permission in Sales
+<img width="312" alt="20 - Bob on Sales" src="https://github.com/user-attachments/assets/0bb6ba0b-430c-4025-9fab-bf1e3a2bd7b5" />
 
 ---
 
 ### 6. 🔗 Share the Folders Over the Network
 - Go to folder properties → `Sharing` tab
+![Uploading 21-properties.png…]()
+
+<img width="413" alt="22-Sharing TAB" src="https://github.com/user-attachments/assets/557b7643-0b86-4d7d-b9b2-9338a5cf578b" />
+
 - Enable **Advanced Sharing**
+<img width="355" alt="23- Advanced Sharing" src="https://github.com/user-attachments/assets/8467536a-af8b-44d2-8fa8-48a945317fd3" />
+
+  
 - Set **Share Permissions** matching NTFS rules
+<img width="314" alt="24- Apply Sharing " src="https://github.com/user-attachments/assets/d1713f33-9cdc-4e21-91c7-3156eb2e385c" />
+
+
+<img width="319" alt="25-Network Path" src="https://github.com/user-attachments/assets/ce760db2-6840-4394-88e3-f4367155b709" />
 
 ---
 
@@ -163,12 +209,19 @@ This project simulates a real-world organizational structure in **Windows Server
 
 #### Steps:
 1. Open **Group Policy Management Console (GPMC)** (`gpmc.msc`)
+<img width="1262" alt="01-GPO" src="https://github.com/user-attachments/assets/ecb2287b-3831-4a88-8d67-6dd056b147af" />
+
+
 2. Right-click `Group Policy Objects` → `New`
-3. Create:
+3. Create:<img width="933" alt="02-Create GPO and Link" src="https://github.com/user-attachments/assets/e65d36d0-7fbf-476d-b59c-adefc5cacd64" />
+
    - `IT_GPO`, `Sales_GPO`, `Finance_GPO`
+     <img width="298" alt="04_All GPOs" src="https://github.com/user-attachments/assets/cfb60c29-814a-4d11-9182-0b7f89b9d7f0" />
+
 4. Right-click each GPO → `Edit`:
    - IT:
      - `User Config > System`: Enable Command Prompt
+     - 
      - `Windows Components > PowerShell`: Enable PowerShell
    - Sales:
      - `User Config > Control Panel`: Restrict access
@@ -178,7 +231,7 @@ This project simulates a real-world organizational structure in **Windows Server
        - Minimum length: 12
        - Complexity: Enabled
        - Lockout threshold: 3 invalid attempts
-5. Link each GPO to its respective OU
+6. Link each GPO to its respective OU
 
 ---
 
@@ -187,14 +240,6 @@ This project simulates a real-world organizational structure in **Windows Server
   - GPOs applied correctly
   - Folder access permissions work as expected
   - ITManager can access Sales and Finance folders
-
----
-
-## 📌 Optional Enhancements
-
-- 📁 Map folders via Group Policy Preferences
-- 📈 Enable audit logs for access tracking
-- 🧪 Automate user/group creation with PowerShell scripts
 
 ---
 
