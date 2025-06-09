@@ -1,5 +1,3 @@
-<img width="298" alt="04_All GPOs" src="https://github.com/user-attachments/assets/e36eb7a4-e8ee-4ca4-930c-441da2d7f604" /># 🛡️ Active Directory Departmental Structure & Group Policy Project
-
 This project simulates a real-world organizational structure in **Windows Server Active Directory**, implementing **organizational units (OUs)**, **user and group management**, **NTFS folder permissions**, and **Group Policy Objects (GPOs)** tailored to each department.
 
 ---
@@ -171,6 +169,7 @@ This project simulates a real-world organizational structure in **Windows Server
 <img width="290" alt="18-Sales Full Control" src="https://github.com/user-attachments/assets/2d46b6ae-a976-4f6e-9a21-7269ffaef1f6" />
 
 
+<img width="298" alt="04_All GPOs" src="https://github.com/user-attachments/assets/e36eb7a4-e8ee-4ca4-930c-441da2d7f604" /># 🛡️ Active Directory Departmental Structure & Group Policy Project
   - `ITManager` **Bob Marley** gets **Read/List** access to `Sales` and `Finance`
 
 - `Bob Marley ` permission in Finance
