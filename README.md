@@ -202,7 +202,7 @@ This project simulates a real-world organizational structure in **Windows Server
 
 | Department (OU) | GPO Name      | Policies Included |
 |------------------|---------------|--------------------|
-| IT               | `IT_GPO`      | Enable CMD & PowerShell |
+| IT               | `IT_GPO`      | Enable CMD & PowerShell Scripting |
 | Sales            | `Sales_GPO`   | Block Control Panel & App Installations |
 | Finance          | `Finance_GPO` | Enforce Strong Passwords & Lockouts |
 
@@ -211,35 +211,86 @@ This project simulates a real-world organizational structure in **Windows Server
 <img width="1262" alt="01-GPO" src="https://github.com/user-attachments/assets/ecb2287b-3831-4a88-8d67-6dd056b147af" />
 
 
-2. Right-click `Group Policy Objects` → `New`
+2. Right-click `Group Policy Objects`
 3. Create:<img width="933" alt="02-Create GPO and Link" src="https://github.com/user-attachments/assets/e65d36d0-7fbf-476d-b59c-adefc5cacd64" />
 
-   - `IT_GPO`, `Sales_GPO`, `Finance_GPO`
-     <img width="298" alt="04_All GPOs" src="https://github.com/user-attachments/assets/cfb60c29-814a-4d11-9182-0b7f89b9d7f0" />
+- `IT_GPO`, `Sales_GPO`, `Finance_GPO`
+- <img width="298" alt="04_All GPOs" src="https://github.com/user-attachments/assets/cfb60c29-814a-4d11-9182-0b7f89b9d7f0" />
 
 4. Right-click each GPO → `Edit`:
    - IT:
      - `User Config > System`: Enable Command Prompt
-     - 
-     - `Windows Components > PowerShell`: Enable PowerShell
-   - Sales:
-     - `User Config > Control Panel`: Restrict access
+       <img width="1208" alt="16-CMD" src="https://github.com/user-attachments/assets/9dbf629b-c148-4223-bf69-d6735fd7c2f4" />
+<img width="560" alt="17-Activate CMD" src="https://github.com/user-attachments/assets/13da540e-20f7-4ef6-9139-4342dbc243b2" />
+
+- `Windows Components > PowerShell`: Enable PowerShell Scripting
+- <img width="980" alt="18 Shell Scripting" src="https://github.com/user-attachments/assets/383497d5-afda-4dcd-96c5-d359e850b750" />
+
+- <img width="555" alt="19-Allow Script" src="https://github.com/user-attachments/assets/bc930994-f968-4d5e-b22e-c9137b56e54f" />
+- Sales:
+- <img width="648" alt="05=Sales-GPO Edit" src="https://github.com/user-attachments/assets/05028cb7-a0e1-4565-af68-312f8736e4e3" />
+
+- `User Config > Control Panel`: Restrict access
+    <img width="1117" alt="06-Sales-GPO-Prohibit" src="https://github.com/user-attachments/assets/89925704-0239-47ea-a99b-8c3559985c33" />
+
+     -  <img width="752" alt="07-Enable Sales GPO" src="https://github.com/user-attachments/assets/beeb9acd-2c28-4f4f-9af9-270c637bedab" />
+
      - `Windows Installer`: Disable installations
+-  <img width="976" alt="08-Restrict Installations" src="https://github.com/user-attachments/assets/9151997f-f653-4ccf-83c5-9b85c250d3bc" />
+
+- <img width="327" alt="09-Apply restriction" src="https://github.com/user-attachments/assets/3ee206ce-3e06-4d73-a015-e190ed696067" />
+
    - Finance:
-     - `Computer Config > Security Settings > Password Policy`: 
-       - Minimum length: 12
-       - Complexity: Enabled
-       - Lockout threshold: 3 invalid attempts
-6. Link each GPO to its respective OU
+     - `Computer Config > Security Settings > Password Policy`:
+    <img width="687" alt="10-password" src="https://github.com/user-attachments/assets/50a9e35d-6584-4487-9b96-bbead42bf283" />
+
+ - Minimum length: 12
+    
+ - <img width="328" alt="11-Activate Password " src="https://github.com/user-attachments/assets/43ec14f9-44ae-48ca-9db9-58a752d6529f" />
+      
+- Complexity: Enabled
+    
+- <img width="334" alt="12-Password Complexity" src="https://github.com/user-attachments/assets/064e8989-4420-4b56-9076-f40bdfb87e61" />
+
+- Lockout threshold: 5 invalid attempts
+      
+<img width="683" alt="13-Account-lockout" src="https://github.com/user-attachments/assets/371274c0-c464-48e7-a569-b94ee53dcda7" />
+<img width="331" alt="14-account-lockout threshold" src="https://github.com/user-attachments/assets/f9a026f8-38ae-4019-a16a-8715e3a096ad" />
+
+<img width="694" alt="15-Account lockout properties" src="https://github.com/user-attachments/assets/6971669c-6132-4a07-90fc-61bcca8a6893" />
+
+
+6. Update GPO using command Prompt
+
+<img width="885" alt="20-gpupdate" src="https://github.com/user-attachments/assets/a93fdbb4-3b7a-401f-bd68-e4611aec27fe" />
 
 ---
 
 ### 8. 🔍 Test and Verify
 - Login as sample users to confirm:
-  - GPOs applied correctly
-  - Folder access permissions work as expected
-  - ITManager can access Sales and Finance folders
+- GPOs applied correctly
+  - Sales staff cannot open Control Panel (Permission denied by Policy)
+  - <img width="925" alt="06-Sales Cannot open Control Panel" src="https://github.com/user-attachments/assets/ea3699ab-946d-4bde-86ae-7407dbf28a4a" />
 
+  - <img width="791" alt="07-Finance member must follow password policy" src="https://github.com/user-attachments/assets/e7742ec6-08f9-4a77-9810-f9fdbd3f4704" />
+  - Finance staff must adhere to password policy
+  - <img width="1179" alt="08-IT Staff can access CMD" src="https://github.com/user-attachments/assets/61169078-cc3b-4438-bdf4-f93f64ae73dc" />
+
+- Folder access permissions work as expected
+ - Sales staff can only access Sales Folder
+  - <img width="1158" alt="03-Sales Can Access Sales Folder" src="https://github.com/user-attachments/assets/830987cb-6d30-40f6-984e-5cc7adaf981a" />
+
+- Sales Staff cannot access IT Folder
+  - <img width="1145" alt="04- Sales Cannot access IT" src="https://github.com/user-attachments/assets/5b0f58d2-bef3-4b3a-ba77-898ccdb0c86a" />
+
+- Sales Staff cannot access Finance Folder
+  - <img width="1228" alt="05-Cannot access Finance" src="https://github.com/user-attachments/assets/30893880-54f4-4d33-a243-7f5aea73cff3" />
+
+- ITManager can access Sales and Finance folders
+
+   - <img width="1155" alt="02-Bob Marley can access" src="https://github.com/user-attachments/assets/b4818db1-8604-424e-b4bc-19e3fc278051" />
+
+  
 ---
 
 ## 🏁 Conclusion
