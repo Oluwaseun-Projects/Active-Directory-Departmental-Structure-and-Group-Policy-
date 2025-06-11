@@ -7,10 +7,8 @@ This project simulates a real-world organizational structure in **Windows Server
 - **Windows Server 2025**
 - **Active Directory Domain Services (AD DS)**
 - **Group Policy Management Console (GPMC)**
-- **File and Storage Services**
 - **NTFS Permissions**
 - **Organizational Units (OUs)**
-- **PowerShell (Optional)**
 - **VirtualBox (for lab virtualization)**
 
 ---
@@ -168,9 +166,7 @@ This project simulates a real-world organizational structure in **Windows Server
 - Full Control Completed: `Sales`
 <img width="290" alt="18-Sales Full Control" src="https://github.com/user-attachments/assets/2d46b6ae-a976-4f6e-9a21-7269ffaef1f6" />
 
-
-<img width="298" alt="04_All GPOs" src="https://github.com/user-attachments/assets/e36eb7a4-e8ee-4ca4-930c-441da2d7f604" /># 🛡️ Active Directory Departmental Structure & Group Policy Project
-  - `ITManager` **Bob Marley** gets **Read/List** access to `Sales` and `Finance`
+- `ITManager` **Bob Marley** gets **Read/List** access to `Sales` and `Finance`
 
 - `Bob Marley ` permission in Finance
 <img width="297" alt="19 Bob on Finance " src="https://github.com/user-attachments/assets/4232b0de-88b4-47da-b8a9-e0b1d645fb50" />
@@ -182,7 +178,6 @@ This project simulates a real-world organizational structure in **Windows Server
 
 ### 6. 🔗 Share the Folders Over the Network
 - Go to folder properties → `Sharing` tab
-![Uploading 21-properties.png…]()
 
 <img width="413" alt="22-Sharing TAB" src="https://github.com/user-attachments/assets/557b7643-0b86-4d7d-b9b2-9338a5cf578b" />
 
@@ -212,7 +207,7 @@ This project simulates a real-world organizational structure in **Windows Server
 
 
 2. Right-click `Group Policy Objects`
-3. Create:<img width="933" alt="02-Create GPO and Link" src="https://github.com/user-attachments/assets/e65d36d0-7fbf-476d-b59c-adefc5cacd64" />
+3. Create a GPO and Link Here:<img width="933" alt="02-Create GPO and Link" src="https://github.com/user-attachments/assets/e65d36d0-7fbf-476d-b59c-adefc5cacd64" />
 
 - `IT_GPO`, `Sales_GPO`, `Finance_GPO`
 - <img width="298" alt="04_All GPOs" src="https://github.com/user-attachments/assets/cfb60c29-814a-4d11-9182-0b7f89b9d7f0" />
@@ -271,12 +266,10 @@ This project simulates a real-world organizational structure in **Windows Server
 - GPOs applied correctly
   - Sales staff cannot open Control Panel (Permission denied by Policy)
   - <img width="925" alt="06-Sales Cannot open Control Panel" src="https://github.com/user-attachments/assets/ea3699ab-946d-4bde-86ae-7407dbf28a4a" />
-
+  
+   - Finance staff must adhere to password policy
   - <img width="791" alt="07-Finance member must follow password policy" src="https://github.com/user-attachments/assets/e7742ec6-08f9-4a77-9810-f9fdbd3f4704" />
-  - Finance staff must adhere to password policy
-  - <img width="1179" alt="08-IT Staff can access CMD" src="https://github.com/user-attachments/assets/61169078-cc3b-4438-bdf4-f93f64ae73dc" />
-
-- Folder access permissions work as expected
+  
  - Sales staff can only access Sales Folder
   - <img width="1158" alt="03-Sales Can Access Sales Folder" src="https://github.com/user-attachments/assets/830987cb-6d30-40f6-984e-5cc7adaf981a" />
 
@@ -301,9 +294,9 @@ This lab simulates a departmental infrastructure within Active Directory, coveri
 
 ## 📄 Author
 
-**Your Name Here**  
-Student | IT Professional | Cybersecurity Enthusiast  
-[LinkedIn](#) | [GitHub](#) | [Blog](#)
+**Oluwaseun Adegboye**  
+IT Professional | Cybersecurity Enthusiast  
+<a href = "www.linkedin.com/in/oluwaseun-adegboye"/>Linkedin<a/>| [GitHub](#) |
 
 ---
 
